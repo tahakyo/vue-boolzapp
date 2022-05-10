@@ -20,7 +20,7 @@ body {
 }
 /* ROOT APP-JS */
 .container {
-    width: 80%;
+    width: 90%;
     min-width: 1000px;
     height: 95vh;
     background-color: lightgray;
