@@ -64,3 +64,9 @@ body {
     height: 75%;
     margin: 4px auto;
 }
+/* MAIN-USER */
+.main-msg {
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 50px);
+    width: 60%;
+}
