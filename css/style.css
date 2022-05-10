@@ -20,6 +20,7 @@ body {
 }
 /* ROOT APP-JS */
 .container {
+    display: flex;
     width: 90%;
     min-width: 1000px;
     height: 95vh;
