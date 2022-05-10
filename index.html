@@ -55,10 +55,10 @@
                <div class="menu-left">
                     <div class="notifications">
                         <i class="fas fa-bell-slash"></i>
-                    <div class="notif-actions">
-                        <div>Ricevi notifiche di nuovi messaggi</div>
-                        <a class="graytext" href="">Attiva notifiche desktop</a>
-                    </div>
+                        <div class="notif-actions">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <a href="">Attiva notifiche desktop</a>
+                        </div>
                     </div>
                     <div class="search">
                         <div class="search-bar">
@@ -66,6 +66,22 @@
                             <input class="search-box"  type="search" name="" id="" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
+                    <ul class="contacts">
+                        <li class="contact-card" v-for="(element, index) in contacts">
+                            <img class="contact-img" :src="'img/avatar'+ element.avatar + '.jpg'" alt="element.name">
+                            <!-- <img class="contact-img" src="img/avatar_1.jpg" alt="Michele"> -->
+                            <div>
+                                <div class="contact-name">
+                                    {{ element.name }}
+                                <div>
+                                <div class="last-msg">
+                                    {{ element.messages[element.messages.length-1].message }}
+                                </div>
+                                <!-- <div class="contact-name">Michele</div>
+                                <div class="last-msg">Ultimo messaggio inviato</div> -->
+                            </div>
+                        </li>
+                    </ul>
                </div>
                <div class="main-screen-container">
                    <div class="main-msg-screen">
