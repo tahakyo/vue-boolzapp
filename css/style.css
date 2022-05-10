@@ -4,7 +4,42 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* COMMON */
 html {
     font-family: 'lato', sans-serif;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #009688 0%,
+        #009688 15%,
+        #dadbd3 15%,
+        #dadbd3 100%
+    );
+}
+/* ROOT APP-JS */
+.container {
+    width: 80%;
+    height: 95vh;
+    background-color: lightgray;
+    margin: 20px auto;
+}
+.nav-bar {
+    height: 50px;
+    background-color: aquamarine;
+}
+.user-side{
+    width: 40%;
+    border: 1px gray;
+
+}
+.contacts-side {
+    width: 60%;
+}
+.menu-left {
+    height: calc(100% - 50px);
+    width: 40%;
+    border-right: 1px solid black;
+    background-color: azure;
 }
