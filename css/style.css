@@ -7,6 +7,7 @@
 /* COMMON */
 html {
     font-family: 'lato', sans-serif;
+    font-size: 100%;
 }
 body {
     height: 100vh;
@@ -17,6 +18,10 @@ body {
         #dadbd3 15%,
         #dadbd3 100%
     );
+}
+i {
+    color: #b1b1b1;
+    cursor: pointer;
 }
 /* ROOT APP-JS */
 .container {
@@ -30,18 +35,46 @@ body {
 .nav-bar {
     display: flex;
     height: 50px;
-    background-color: aquamarine;
+    background-color: #eaeaea;
 }
+    /* User-side */
 .user-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
     width: 40%;
-    border: 1px solid gray;
-    background-color: orange;
-
+    border-right: 1px solid gray;
 }
+.avatar {
+    display: flex;
+    align-items: center;
+}
+.avatar img {
+    width: 3rem;
+    padding: 2px;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+    /* contacts-side */
 .contacts-side {
+    display: flex;
     width: 60%;
 }
+.contacts-icons {
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+
 /* NAV */
 /* MENU */
 .menu-container {
@@ -49,26 +82,52 @@ body {
     height: 95vh;
     display: flex;
 }
+    /* menu-left */
 .menu-left {
     height: calc(100% - 50px);
     width: 40%;
     border-right: 1px solid black;
-    background-color: azure;
+    background-color: #f4f4f4;
 }
+    /* Notifications */
 .notifications {
-    height: 60px;
-    background-color: blue;
+    display: flex;
+    background-color: #8edafc;
+    align-items: center;
+    padding: .75rem;
 }
+.notifications i {
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    color: #8edafc;
+    padding: 0.9rem 0.7rem;
+}
+.notif-actions {
+    margin-left: 1rem;
+}
+    /* Search-bar */
 .search {
     display: flex;
     justify-content: center;
     height: 40px;
-    background-color: bisque;
+    background-color: #f4f4f4;
+    padding: 5px;
 }
+.search-bar {
+    background-color: white;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #b1b1b1;
+    padding: 5px;
+}
+
 .search-box {
-    width: 97%;
-    height: 75%;
-    margin: 4px auto;
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    margin-left: .5rem;
 }
     /* User-menu */
 .main-screen-container {
