@@ -21,25 +21,46 @@ body {
 /* ROOT APP-JS */
 .container {
     width: 80%;
+    min-width: 1000px;
     height: 95vh;
     background-color: lightgray;
     margin: 20px auto;
 }
+/* NAV */
 .nav-bar {
     height: 50px;
     background-color: aquamarine;
 }
 .user-side{
+    height: 100%;
     width: 40%;
-    border: 1px gray;
+    border: 1px solid gray;
+    background-color: orange;
 
 }
 .contacts-side {
     width: 60%;
 }
+/* NAV */
+/* MENU */
 .menu-left {
     height: calc(100% - 50px);
     width: 40%;
     border-right: 1px solid black;
     background-color: azure;
+}
+.notifications {
+    height: 60px;
+    background-color: blue;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    background-color: bisque;
+}
+.search-box {
+    width: 97%;
+    height: 75%;
+    margin: 4px auto;
 }
