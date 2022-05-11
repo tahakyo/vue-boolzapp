@@ -40,7 +40,7 @@
                <!-- Contacts-side -->
                <div class="contacts-side">
                    <div class="avatar">
-                       <img src="img/avatar_1.jpg" alt="Michele">
+                       <img :src="'img/avatar' + contacts[currentContact].avatar + '.jpg'" alt="Michele">
                     </div>
                     <div>
                         <span>{{ contacts[currentContact].name }}</span>
@@ -75,6 +75,7 @@
                         <li 
                         v-for="(element, index) in contacts" class="contact-card"
                         :class="{'active-contact' : currentContact === index}"
+                        @click="showMsgs(index)"
                         >
                             <img class="contact-img" :src="'img/avatar'+ element.avatar + '.jpg'" alt="element.name">
                             <div>
@@ -94,23 +95,17 @@
                <!-- Main-scrren-messages -->
                <div class="main-screen-container">
                    <div class="main-msg-screen">
-                       <div class="messages sent">
+                       <div
+                       v-for="(element, index) in contacts[currentContact].messages"
+                       :class="element.status"   
+                       class="messages sent">
                            <div class="message-box">
                                <div class="message-text">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, vero maxime! Ea laudantium aliquid reiciendis eius tempora asperiores! Reprehenderit animi, harum perferendis iusto tempora blanditiis iste saepe aliquam officia tenetur!
+                                    {{element.message}}
                                </div>
                                <div class="message-time">
-                                    12:00
-                               </div>
-                           </div>
-                       </div>
-                       <div class="messages received">
-                           <div class="message-box">
-                               <div class="message-text">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, vero maxime! Ea laudantium aliquid reiciendis eius tempora asperiores! Reprehenderit animi, harum perferendis iusto tempora blanditiis iste saepe aliquam officia tenetur!
-                               </div>
-                               <div class="message-time">
-                                    12:00
+                                    {{element.date}}
+                                    <!-- 12:00 -->
                                </div>
                            </div>
                        </div>

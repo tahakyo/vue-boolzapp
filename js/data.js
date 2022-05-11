@@ -166,11 +166,12 @@ const app = new Vue (
                     ],
                 }
             ],
-            currentContact: 0
+            currentContact: 0,
         },
         methods : {
-
-        }
-    }
-)
+            showMsgs: function (index) {
+                this.currentContact = index;
+            },
+        },
+    });
 
