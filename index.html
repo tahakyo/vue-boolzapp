@@ -77,17 +77,38 @@
                                 <div class="last-msg">
                                     {{ element.messages[element.messages.length-1].message }}
                                 </div>
-                                <div class="last-msg-date">
-                                    {{ element.messages[element.messages.length-1].date }}
-                                </div>
+                                
                                 <!-- <div class="contact-name">Michele</div>
                                 <div class="last-msg">Ultimo messaggio inviato</div> -->
+                            </div>
+                            <div class="last-msg-date">
+                                {{ element.messages[element.messages.length-1].date }}
                             </div>
                         </li>
                     </ul>
                </div>
                <div class="main-screen-container">
                    <div class="main-msg-screen">
+                       <div class="messages sent">
+                           <div class="message-box">
+                               <div class="message-text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, vero maxime! Ea laudantium aliquid reiciendis eius tempora asperiores! Reprehenderit animi, harum perferendis iusto tempora blanditiis iste saepe aliquam officia tenetur!
+                               </div>
+                               <div class="message-time">
+                                    12:00
+                               </div>
+                           </div>
+                       </div>
+                       <div class="messages received">
+                           <div class="message-box">
+                               <div class="message-text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, vero maxime! Ea laudantium aliquid reiciendis eius tempora asperiores! Reprehenderit animi, harum perferendis iusto tempora blanditiis iste saepe aliquam officia tenetur!
+                               </div>
+                               <div class="message-time">
+                                    12:00
+                               </div>
+                           </div>
+                       </div>
                    </div>
                    <div class="user-input">
                         <input class="msg-input" type="text" placeholder="Scrivi un messaggio">
