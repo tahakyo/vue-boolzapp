@@ -140,6 +140,9 @@ ul {
     overflow-x: hidden;
     height: calc(100% - 125px);
 }
+.active-contact {
+    background-color: #e9ebeb;
+}
 .contact-card {
     display: flex;
     align-items: center;
@@ -152,11 +155,12 @@ ul {
     font-size: 1rem;
 }
 .last-msg {
-    color: lightgray;
+    color: grey;
     font-size: .8rem;
 }
 .last-msg-date {
     font-size: .8rem;
+    color: lightgray;
 }
     /* User-menu */
 .main-screen-container {
@@ -201,6 +205,9 @@ ul {
 .user-input {
     height: 50px;
     background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .msg-input {
     width: 80%;
