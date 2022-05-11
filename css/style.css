@@ -186,10 +186,10 @@ ul {
     color: lightgray;
 }
 .sent {
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 .received {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .sent .message-box {
     background-color: #d5f9ba;
