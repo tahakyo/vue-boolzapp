@@ -67,13 +67,20 @@
                     <div class="search">
                         <div class="search-bar">
                             <i class="fas fa-search"></i>
-                            <input class="search-box"  type="search" name="" id="" placeholder="Cerca o inizia una nuova chat">
+                            <input 
+                            class="search-box"  
+                            type="search" name="" id="" 
+                            placeholder="Cerca o inizia una nuova chat"
+                            v-model="searchContact"
+                            @keyup="filterContact">
                         </div>
                     </div>
                     <!-- Contacts -->
                     <ul class="contacts">
                         <li 
-                        v-for="(element, index) in contacts" class="contact-card"
+                        v-for="(element, index) in contacts"
+                        v-if="element.visible"
+                        class="contact-card"
                         :class="{'active-contact' : currentContact === index}"
                         @click="showMsgs(index)"
                         >

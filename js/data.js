@@ -168,6 +168,7 @@ const app = new Vue (
             ],
             currentContact: 0,
             newMessage:'',
+            searchContact: '',
         },
         methods : {
             showMsgs: function (index) {
@@ -191,6 +192,20 @@ const app = new Vue (
                    status: 'received'
                });
             },
+            filterContact() {
+                 // Scorro l'array di todo per ogni elmento
+                // se il text contiene il search,
+                    // visible diventa true
+                // altrimenti
+                    //visible diventa false
+                this.contacts.forEach(element => {
+                    if (element.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
+            }
         },
-    });
+    })
 
