@@ -167,10 +167,29 @@ const app = new Vue (
                 }
             ],
             currentContact: 0,
+            newMessage:'',
         },
         methods : {
             showMsgs: function (index) {
                 this.currentContact = index;
+            },
+            sendMessage() {
+               const selectedContact = this.contacts[this.currentContact];
+               selectedContact.messages.push({
+                   date : '00:01',
+                   message: this.newMessage,
+                   status: 'sent'
+               });
+               this.newMessage = '';
+               setTimeout(this.receivedMessage, 1000);
+            },
+            receivedMessage() {
+                const selectedContact = this.contacts[this.currentContact];
+               selectedContact.messages.push({
+                   date : '00:02',
+                   message: '...',
+                   status: 'received'
+               });
             },
         },
     });

@@ -115,7 +115,12 @@
                         <div class="input-action">
                             <i class="far fa-smile"></i>
                         </div>
-                        <input class="msg-input" type="text" placeholder="Scrivi un messaggio">
+                        <input 
+                        class="msg-input" 
+                        type="text" 
+                        placeholder="Scrivi un messaggio" 
+                        @keyup.enter="sendMessage"
+                        v-model="newMessage">
                         <div class="input-action">
                             <i class="fas fa-microphone"></i>
                         </div>
