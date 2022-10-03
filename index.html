@@ -44,7 +44,7 @@
                     </div>
                     <div>
                         <span>{{ contacts[currentContact].name }}</span>
-                        <p>{{ contacts[currentContact].messages[currentContact].date }}</p>
+                        <p>{{contacts[currentContact].messages[contacts[currentContact].messages.length - 1].date}}</p>
                     </div>
                     <div class="contacts-icons">
                         <i class="fas fa-search"></i>
@@ -81,7 +81,7 @@
                         v-for="(element, index) in contacts"
                         v-if="element.visible"
                         class="contact-card"
-                        :class="{'active-contact' : currentContact === index}"
+                        :class="currentContact === index ? 'active-contact' : ''"
                         @click="showMsgs(index)"
                         >
                             <img class="contact-img" :src="'img/avatar'+ element.avatar + '.jpg'" alt="element.name">
@@ -103,9 +103,8 @@
                <div class="main-screen-container">
                    <div class="main-msg-screen">
                        <div
-                       v-for="(element, index) in contacts[currentContact].messages"
-                       :class="element.status"   
-                       class="messages sent">
+                       v-for="element in contacts[currentContact].messages"
+                       :class="element.status === 'sent' ? 'messages sent' : 'messages received'">
                            <div class="message-box">
                                <div class="message-text">
                                     {{element.message}}
